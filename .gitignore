@@ -1,13 +1,13 @@
 # debug log
-debug.log
+image_preprocess/debug.log
 
 #api key
-surfers-284305-c0ff996c7d07.json
-api_key.py
+image_preprocess/surfers-284305-c0ff996c7d07.json
+image_preprocess/api_key.py
 
 #images
-images/
-preproc_images/
+image_preprocess/images/
+image_preprocess/preproc_images/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,7 +1,5 @@
 
 from googleapiclient import  discovery
-from oauth2client.client  import GoogleCredentials
-import sys
 import io
 import base64
 from PIL import Image
@@ -10,7 +8,7 @@ from genericpath import isfile
 import os
 import hashlib
 from oauth2client.service_account import ServiceAccountCredentials
-from api_key import api_key
+from image_preprocess.api_key import api_key
 
 NUM_THREADS = 10
 MAX_FACE = 2
