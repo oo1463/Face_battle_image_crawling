@@ -1,5 +1,7 @@
 # FaceBattle_deeplearning_model
-Face Battle application backend
+Face Battle application 
+
+CNN deeplearning model create
 
 <br>
 
