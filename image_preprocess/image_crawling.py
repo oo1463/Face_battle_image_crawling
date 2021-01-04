@@ -1,13 +1,10 @@
 from selenium import webdriver
 import os
-from multiprocessing import Process
-import json
-from selenium.webdriver.common.keys import Keys
 import urllib.request
 import time
 
 # 사람당 이미지의 최대 갯수
-mx_image_count = 2
+mx_image_count = 400
 base_url = "https://www.google.co.kr/search?hl=ko&tbm=isch&source=hp&biw=1036&bih=646&ei=rQvvX_jEO7WGr7wPruSvoA8&q="
 base_face_image_find_url = "&gs_lcp=CgNpbWcQAzIFCAAQsQMyCAgAELEDEIMBMggIABCxAxCDATIICAAQsQMQgwEyCAgAELEDEIMBMgUIABCxAzIFCAAQsQMyBQgAELEDMgIIADIFCAAQsQM6BAgAEANQtQJYvAdghghoAHAAeACAAU-IAfICkgEBNZgBAKABAaoBC2d3cy13aXotaW1n&sclient=img&ved=0ahUKEwi4z93f1PrtAhU1w4sBHS7yC_QQ4dUDCAc&uact=5&tbs=itp:face"
 
@@ -75,6 +72,7 @@ def crawling_start(term):
             continue
 
         try:
+
             opener = urllib.request.build_opener()
             opener.addheaders = [('User-Agent',
                                   'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1941.0 Safari/537.36')]
@@ -85,7 +83,7 @@ def crawling_start(term):
             if not image_counter(succounter):
                 browser.close()
                 return 1
-            print(term + succounter)
+            print(term + str(succounter))
         except:
             print("can't get img")
 
@@ -95,11 +93,6 @@ def crawling_start(term):
 
 if __name__ == "__main__":
 
-    threads = []
     for search_term in search_terms:
-        thread = Process(target=crawling_start, args=(search_term,))
-        thread.start()
-        threads.append(thread)
-
-    for i in threads:
-        i.join()
+        print(search_term + " done")
+        crawling_start(search_term)
