@@ -63,7 +63,7 @@ def crawling_start(term):
     for x in browser.find_elements_by_xpath('//img[contains(@class,"rg_i Q4LuWd")]'):
         try:
             x.click()
-            time.sleep(1)
+            time.sleep(0.5)
             img_url = browser.find_element_by_xpath(
                 '/html/body/div[2]/c-wiz/div[3]/div[2]/div[3]/div/div/div[3]/div[2]/c-wiz/div[1]/div[1]/div/div[2]/a/img').get_attribute(
                 "src")
