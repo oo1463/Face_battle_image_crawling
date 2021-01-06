@@ -14,3 +14,7 @@ download in [https://chromedriver.chromium.org/downloads](https://chromedriver.c
 
 1. make image_preprocess/api_key.py
 2. write `api_key = '{my_api_key}.json'`
+
+
+## Face_battle rest api endpoint
+https://github.com/oo1463/FaceBattle_image_backend
