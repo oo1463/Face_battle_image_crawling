@@ -10,8 +10,9 @@ if __name__ == "__main__":
     job_queue = []
     for search_term in image_preprocess.image_crawling.search_terms:
         if len(job_queue) >= max_process_queue_size:
-            job_queue[0].join()
-            job_queue[1].join()
+            for i in range(max_process_queue_size):
+                job_queue[i].join()
+            job_queue = []
 
         process = Process(target=image_preprocess.image_crawling.crawling_start, args=(search_term,))
         process.start()
