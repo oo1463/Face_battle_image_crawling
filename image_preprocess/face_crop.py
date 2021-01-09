@@ -13,7 +13,7 @@ from image_preprocess.api_key import api_key
 NUM_THREADS = 10
 MAX_FACE = 2
 MAX_LABEL = 50
-IMAGE_SIZE = 96 ,96
+IMAGE_SIZE = 96, 96
 MAX_ROLL = 20
 MAX_TILT = 20
 MAX_PAN = 20
@@ -170,11 +170,11 @@ class FaceDetector():
     # read files in src_dir and crop face only and write it into des_dir
     def crop_faces_dir(self, src_dir, des_dir, maxnum):
 
-        # training data will be written in $des_dir/training
-        # validation data will be written in $des_dir/validate
+        # training data will be written in $des_dir
+        # validation data will be written in $des_dir
 
-        des_dir_training = os.path.join(des_dir, 'training')
-        des_dir_validate = os.path.join(des_dir, 'validate')
+        des_dir_training = os.path.join(des_dir)
+        des_dir_validate = os.path.join(des_dir)
 
         if not os.path.exists(des_dir):
             os.makedirs(des_dir)
@@ -260,8 +260,8 @@ class FaceDetector():
 # arg[2] : destination diectory
 # arg[3] : max number of samples per class
 def main():
-    srcdir = 'crawling/images'
-    desdir = 'crawling/preproc_images'
+    srcdir = 'images'
+    desdir = 'preproc_images'
     maxnum = 500
 
     detector = FaceDetector()
