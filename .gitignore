@@ -8,6 +8,7 @@ image_preprocess/api_key.py
 #images
 image_preprocess/images/
 image_preprocess/preproc_images/
+image_preprocess/images.zip
 
 #.npy
 Deeplearning/*.npy
