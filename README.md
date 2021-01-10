@@ -5,6 +5,8 @@ Face Battle application backend
 <br>
 
 ## Prerequisite
+` $ pip install -r requirements.txt `
+
 
 - chromedriver.exe (this version is for windows 10)
 

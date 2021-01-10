@@ -9,6 +9,12 @@ image_preprocess/api_key.py
 image_preprocess/images/
 image_preprocess/preproc_images/
 
+#.npy
+Deeplearning/*.npy
+
+#tagging
+image_preprocess/image_tagging.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
